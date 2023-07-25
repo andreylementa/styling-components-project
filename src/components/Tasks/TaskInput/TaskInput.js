@@ -24,16 +24,16 @@ const TaskInput = (props) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className="form-control">
+      <div className={`form-control ${!isInputValid ? "invalid" : ""}`}>
         <label
-          style={{
-            color: !isInputValid ? "red" : "black",
-          }}
+        //style={{
+        //  color: !isInputValid ? "red" : "black",
+        //}}
         >
           Задачи
         </label>
         <input
-          style={{ borderColor: !isInputValid ? "red" : "black" }}
+          //style={{ borderColor: !isInputValid ? "red" : "black" }}
           type="text"
           onChange={taskInputChangeHandler}
         />
